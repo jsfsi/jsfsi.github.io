@@ -1,13 +1,153 @@
-<html>
-    <head>
-        <link rel="icon" type="image/png" href="assets/xsmall.png"/>
-    </head>
-    <body>
-        <img src="assets/large.png" alt="">
-        <div style="margin-top: 20px">
-            <a href = "mailto: joao.franco@jsfsi.com">Send Email: joao.franco@jsfsi.com</a>
-            <br />
-            <a href = "https://www.linkedin.com/in/jsfsi/">Linkedin</a>        
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JSFSI</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/style.css" />
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body class="is-boxed has-animations">
+    <div class="body-wrap">
+      <header class="site-header">
+        <div class="container">
+          <div class="site-header-inner">
+            <div class="brand header-brand">
+              <h1 class="m-0">
+                <a href="http://www.jsfsi.com/">
+                  <img
+                    class="header-logo-image"
+                    src="assets/xsmall.png"
+                    alt="Logo"
+                  />
+                </a>
+              </h1>
+            </div>
+          </div>
         </div>
-    </body>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero-inner">
+              <div class="hero-copy">
+                <h1 class="hero-title mt-0">Joao Sousa Franco - SI</h1>
+                <p class="hero-paragraph">
+                  We provide Software Engineering consulting services.
+                </p>
+                <div class="hero-cta">
+                    <a class="button button-primary" href="mailto:support@jsfsi.com">Get in touch</a
+                        ><a class="button" href="https://github.com/joaosousafranco">Github Repositories</a>
+                </div>
+              </div>
+              <div>
+                <img src="assets/large.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features section">
+          <div class="container">
+            <div class="features-inner section-inner has-bottom-divider">
+              <div class="features-wrap">
+                <div class="feature text-center is-revealing">
+                  <div class="feature-inner">
+                    <div class="feature-icon">
+                      <img
+                        src="dist/images/feature-icon-02.svg"
+                        alt="Feature 01"
+                      />
+                    </div>
+                    <h4 class="feature-title mt-24">CI / CD</h4>
+                    <p class="text-sm mb-0">
+                      Experience with multiple CI / CD tools, including Jenkins, Azure Devops, Docker, Kubernetes and others.
+                    </p>
+                  </div>
+                </div>
+                <div class="feature text-center is-revealing">
+                  <div class="feature-inner">
+                    <div class="feature-icon">
+                      <img
+                        src="dist/images/feature-icon-01.svg"
+                        alt="Feature 02"
+                      />
+                    </div>
+                    <h4 class="feature-title mt-24">SQL And NoSQL Databases</h4>
+                    <p class="text-sm mb-0">
+                      We have been using different types of databases including, Postgres, MSQL Server, Mongo, Redis, Dynamo, Datastore and others
+                    </p>
+                  </div>
+                </div>
+                <div class="feature text-center is-revealing">
+                  <div class="feature-inner">
+                    <div class="feature-icon">
+                      <img
+                        src="dist/images/feature-icon-03.svg"
+                        alt="Feature 03"
+                      />
+                    </div>
+                    <h4 class="feature-title mt-24">Cloud Environments</h4>
+                    <p class="text-sm mb-0">
+                      Setup of cloud environments in different cloud providers, using infrastructure as code, either with the cloud native
+                      providers or using terraform. Most experience with Google Cloud, AWS and Azure.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="site-footer-inner">
+            <div class="brand footer-brand">
+              <a href="http://www.jsfsi.com/">
+                <img
+                  class="header-logo-image"
+                  src="assets/xsmall.png"
+                  alt="Logo"
+                />
+              </a>
+            </div>
+            <ul class="footer-links list-reset">
+              <li>
+                <a href="mailto:support@jsfsi.com" target="blank">Contact</a>
+              </li>
+              <li>
+                <a href="mailto:support@jsfsi.com" target="blank">Support</a>
+              </li>
+            </ul>
+            <ul class="footer-social-links list-reset">
+              <li>
+                <a href="https://www.linkedin.com/in/jsfsi/" target="blank">
+                  <span class="screen-reader-text">Linkedin</span>
+                  <svg width="24"
+                  height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><g fill="none"><path d="M0 18.338C0 8.216 8.474 0 18.92 0h218.16C247.53 0 256 8.216 256 18.338v219.327C256 247.79 247.53 256 237.08 256H18.92C8.475 256 0 247.791 0 237.668V18.335z" fill="#069"/><path d="M77.796 214.238V98.986H39.488v115.252H77.8zM58.65 83.253c13.356 0 21.671-8.85 21.671-19.91-.25-11.312-8.315-19.915-21.417-19.915-13.111 0-21.674 8.603-21.674 19.914 0 11.06 8.312 19.91 21.169 19.91h.248zM99 214.238h38.305v-64.355c0-3.44.25-6.889 1.262-9.346 2.768-6.885 9.071-14.012 19.656-14.012 13.858 0 19.405 10.568 19.405 26.063v61.65h38.304v-66.082c0-35.399-18.896-51.872-44.099-51.872-20.663 0-29.738 11.549-34.78 19.415h.255V98.99H99.002c.5 10.812-.003 115.252-.003 115.252z" fill="#fff"/></g></svg>
+                </a>
+              </li>
+            </ul>
+            <div class="footer-copyright">
+              &copy; 2014 João Sousa Franco - Serviços Informática, all rights
+              reserved
+            </div>
+            <div style="display: none">
+              Source template: https://cruip.com/demos/solid/
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+  </body>
 </html>
