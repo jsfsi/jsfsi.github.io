@@ -1,153 +1,159 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JSFSI</title>
+    <title>JSFSI · Software engineering consulting</title>
+    <meta
+      name="description"
+      content="João Sousa Franco – Sistemas de Informática. AI-native software engineering: SaaS products and consulting built with agent-driven delivery pipelines, plus CI/CD, databases and cloud environments on Google Cloud, AWS and Azure."
+    />
+    <link rel="icon" type="image/png" href="assets/xsmall.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600"
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="dist/css/style.css" />
-    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="assets/site.css" />
   </head>
-  <body class="is-boxed has-animations">
-    <div class="body-wrap">
-      <header class="site-header">
-        <div class="container">
-          <div class="site-header-inner">
-            <div class="brand header-brand">
-              <h1 class="m-0">
-                <a href="http://www.jsfsi.com/">
-                  <img
-                    class="header-logo-image"
-                    src="assets/xsmall.png"
-                    alt="Logo"
-                  />
-                </a>
-              </h1>
+  <body>
+    <header class="site-header wrap">
+      <a class="brand" href="https://www.jsfsi.com/">
+        <img src="assets/xsmall.png" width="50" height="40" alt="JSFSI home" />
+      </a>
+      <a class="header-link" href="mailto:support@jsfsi.com">support@jsfsi.com</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="hero-owner">João Sousa Franco – Sistemas de Informática</p>
+            <h1>Software engineering, from first commit to&nbsp;production.</h1>
+            <p class="hero-lede">
+              We build SaaS products and client systems with AI-native
+              engineering pipelines, where coding agents work alongside
+              engineers to ship more, faster, without lowering the bar.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:support@jsfsi.com">Get in touch</a>
+              <a class="btn btn-ghost" href="https://github.com/joaosousafranco">See work on GitHub</a>
             </div>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-logo" src="assets/large.png" width="300" height="285" alt="JSFSI logo" />
           </div>
         </div>
-      </header>
+      </section>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <div class="hero-inner">
-              <div class="hero-copy">
-                <h1 class="hero-title mt-0">Joao Sousa Franco - SI</h1>
-                <p class="hero-paragraph">
-                  We provide Software Engineering consulting services.
-                </p>
-                <div class="hero-cta">
-                    <a class="button button-primary" href="mailto:support@jsfsi.com">Get in touch</a
-                        ><a class="button" href="https://github.com/joaosousafranco">Github Repositories</a>
-                </div>
-              </div>
-              <div>
-                <img src="assets/large.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="features section">
-          <div class="container">
-            <div class="features-inner section-inner has-bottom-divider">
-              <div class="features-wrap">
-                <div class="feature text-center is-revealing">
-                  <div class="feature-inner">
-                    <div class="feature-icon">
-                      <img
-                        src="dist/images/feature-icon-02.svg"
-                        alt="Feature 01"
-                      />
-                    </div>
-                    <h4 class="feature-title mt-24">CI / CD</h4>
-                    <p class="text-sm mb-0">
-                      Experience with multiple CI / CD tools, including Jenkins, Azure Devops, Docker, Kubernetes and others.
-                    </p>
-                  </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                  <div class="feature-inner">
-                    <div class="feature-icon">
-                      <img
-                        src="dist/images/feature-icon-01.svg"
-                        alt="Feature 02"
-                      />
-                    </div>
-                    <h4 class="feature-title mt-24">SQL And NoSQL Databases</h4>
-                    <p class="text-sm mb-0">
-                      We have been using different types of databases including, Postgres, MSQL Server, Mongo, Redis, Dynamo, Datastore and others
-                    </p>
-                  </div>
-                </div>
-                <div class="feature text-center is-revealing">
-                  <div class="feature-inner">
-                    <div class="feature-icon">
-                      <img
-                        src="dist/images/feature-icon-03.svg"
-                        alt="Feature 03"
-                      />
-                    </div>
-                    <h4 class="feature-title mt-24">Cloud Environments</h4>
-                    <p class="text-sm mb-0">
-                      Setup of cloud environments in different cloud providers, using infrastructure as code, either with the cloud native
-                      providers or using terraform. Implemented projects using Google Cloud, AWS and Azure.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div class="container">
-          <div class="site-footer-inner">
-            <div class="brand footer-brand">
-              <a href="http://www.jsfsi.com/">
-                <img
-                  class="header-logo-image"
-                  src="assets/xsmall.png"
-                  alt="Logo"
-                />
-              </a>
-            </div>
-            <ul class="footer-links list-reset">
-              <li>
-                <a href="mailto:support@jsfsi.com" target="blank">Contact</a>
-              </li>
-              <li>
-                <a href="mailto:support@jsfsi.com" target="blank">Support</a>
-              </li>
-            </ul>
-            <ul class="footer-social-links list-reset">
-              <li>
-                <a href="https://www.linkedin.com/in/jsfsi/" target="blank">
-                  <span class="screen-reader-text">Linkedin</span>
-                  <svg width="24"
-                  height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><g fill="none"><path d="M0 18.338C0 8.216 8.474 0 18.92 0h218.16C247.53 0 256 8.216 256 18.338v219.327C256 247.79 247.53 256 237.08 256H18.92C8.475 256 0 247.791 0 237.668V18.335z" fill="#069"/><path d="M77.796 214.238V98.986H39.488v115.252H77.8zM58.65 83.253c13.356 0 21.671-8.85 21.671-19.91-.25-11.312-8.315-19.915-21.417-19.915-13.111 0-21.674 8.603-21.674 19.914 0 11.06 8.312 19.91 21.169 19.91h.248zM99 214.238h38.305v-64.355c0-3.44.25-6.889 1.262-9.346 2.768-6.885 9.071-14.012 19.656-14.012 13.858 0 19.405 10.568 19.405 26.063v61.65h38.304v-66.082c0-35.399-18.896-51.872-44.099-51.872-20.663 0-29.738 11.549-34.78 19.415h.255V98.99H99.002c.5 10.812-.003 115.252-.003 115.252z" fill="#fff"/></g></svg>
-                </a>
-              </li>
-            </ul>
-            <div class="footer-copyright">
-              &copy; 2014 João Sousa Franco - Serviços Informática, all rights
-              reserved
-            </div>
-            <div style="display: none">
-              Source template: https://cruip.com/demos/solid/
-            </div>
-          </div>
+      <section class="process wrap" aria-labelledby="process-title">
+        <div class="process-intro">
+          <h2 id="process-title">How we build</h2>
+          <p>
+            AI is how we work, not a feature we add at the end. Agents take on
+            the repetitive work at every stage of delivery, and an engineer
+            stays accountable for every change that ships.
+          </p>
         </div>
-      </footer>
-    </div>
 
-    <script src="dist/js/main.min.js"></script>
+        <ol class="pipeline">
+          <li>
+            <span class="pipeline-step">Specify</span>
+            <p>Engineers define the problem and acceptance criteria. Agents explore the codebase and draft the plan.</p>
+          </li>
+          <li>
+            <span class="pipeline-step">Build</span>
+            <p>Coding agents implement against the spec, test first, inside the same repository and CI the team uses.</p>
+          </li>
+          <li>
+            <span class="pipeline-step">Review</span>
+            <p>Every change passes automated review agents and a human engineer before it merges.</p>
+          </li>
+          <li>
+            <span class="pipeline-step">Ship</span>
+            <p>Pipelines test, deploy and monitor each release. People decide what goes live.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="services wrap" aria-labelledby="services-title">
+        <h2 id="services-title">What we work on</h2>
+
+        <article class="service">
+          <span class="service-mark" aria-hidden="true"></span>
+          <h3>AI-native SaaS products</h3>
+          <div class="service-body">
+            <p>
+              Products designed around AI from the start: agent workflows,
+              language model integrations, retrieval over your own data, and
+              evaluations that show whether it works.
+            </p>
+            <ul class="chips">
+              <li>Agents</li><li>LLM integration</li><li>Retrieval (RAG)</li><li>Evaluations</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service">
+          <span class="service-mark" aria-hidden="true"></span>
+          <h3>CI / CD</h3>
+          <div class="service-body">
+            <p>
+              Build, test and release pipelines that teams can trust, running
+              on GitHub Actions and deploying to Google Cloud.
+            </p>
+            <ul class="chips">
+              <li>GitHub Actions</li><li>Google Cloud</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service">
+          <span class="service-mark" aria-hidden="true"></span>
+          <h3>SQL and NoSQL databases</h3>
+          <div class="service-body">
+            <p>
+              Choosing, modelling and running the right store for the job,
+              whether relational, document or key–value.
+            </p>
+            <ul class="chips">
+              <li>PostgreSQL</li><li>SQL Server</li><li>MongoDB</li><li>Redis</li><li>DynamoDB</li><li>Datastore</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="service">
+          <span class="service-mark" aria-hidden="true"></span>
+          <h3>Cloud environments</h3>
+          <div class="service-body">
+            <p>
+              Cloud setups defined as infrastructure as code, with each
+              provider's native tooling, Terraform or Pulumi.
+            </p>
+            <ul class="chips">
+              <li>Google Cloud</li><li>AWS</li><li>Azure</li><li>Terraform</li><li>Pulumi</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="contact wrap" aria-labelledby="contact-title">
+        <div class="contact-panel">
+          <h2 id="contact-title">Have a project in mind?</h2>
+          <p>Tell us what you're building and where you're stuck. We'll reply by email.</p>
+          <a class="contact-email" href="mailto:support@jsfsi.com">support@jsfsi.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <p>&copy; 2014–2026 João Sousa Franco – Serviços de Informática</p>
+      <ul class="footer-links">
+        <li><a href="mailto:support@jsfsi.com">Contact</a></li>
+        <li><a href="https://github.com/joaosousafranco">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jsfsi/">LinkedIn</a></li>
+      </ul>
+    </footer>
   </body>
 </html>

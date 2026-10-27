@@ -1,0 +1,450 @@
+/* Palette taken from the JF logo */
+:root {
+  --paper: #f4f8fb;
+  --blue: #0087c4;
+  --fold: #00639c;
+  --ink: #06263d;
+  --tint: #dceef7;
+  --text: #1d3a4f;
+  --muted: #4d6a7e;
+  --cut: 14px;
+  --display: "Barlow Semi Condensed", "Arial Narrow", sans-serif;
+  --body: "Barlow", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font: 400 1.125rem/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  color: var(--ink);
+  line-height: 1.05;
+  margin: 0;
+}
+
+a {
+  color: var(--fold);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: min(1120px, 100% - 32px);
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.brand img {
+  display: block;
+}
+
+.header-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.header-link:hover {
+  color: var(--blue);
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding-block: clamp(40px, 7vw, 96px) clamp(64px, 9vw, 112px);
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-copy {
+  max-width: 40rem;
+}
+
+.hero-owner {
+  margin: 0 0 20px;
+  font-weight: 500;
+  color: var(--fold);
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 6.4vw, 5.25rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.hero-lede {
+  margin: 28px 0 0;
+  max-width: 34rem;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(300px, 34vw, 440px);
+  aspect-ratio: 1;
+  background: #fff;
+  clip-path: polygon(48px 0, 100% 0, 100% calc(100% - 48px), calc(100% - 48px) 100%, 0 100%, 0 48px);
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(225deg, var(--blue) 50%, transparent 50%);
+}
+
+.hero-logo {
+  width: 68%;
+  height: auto;
+}
+
+/* Buttons: chamfered like the logo strokes */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  font: 600 1.0625rem/1.2 var(--display);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--fold);
+}
+
+.btn-ghost {
+  background: var(--tint);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: #c9e4f2;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--ink);
+}
+
+/* Process: a pipeline of chevrons stepping from tint to the logo's fold blue */
+.process-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 18rem) minmax(0, 36rem);
+  gap: 16px 72px;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+
+.process h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+}
+
+.process-intro p {
+  margin: 0;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pipeline-step {
+  display: block;
+  padding: 18px 40px 18px 44px;
+  font: 600 1.375rem/1.2 var(--display);
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%, 28px 50%);
+}
+
+.pipeline li:first-child .pipeline-step {
+  padding-left: 24px;
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%);
+}
+
+.pipeline li:nth-child(1) .pipeline-step {
+  background: var(--tint);
+  color: var(--ink);
+}
+
+.pipeline li:nth-child(2) .pipeline-step {
+  background: #8ccbe8;
+  color: var(--ink);
+}
+
+.pipeline li:nth-child(3) .pipeline-step {
+  background: var(--blue);
+  color: #fff;
+}
+
+.pipeline li:nth-child(4) .pipeline-step {
+  background: var(--fold);
+  color: #fff;
+}
+
+.pipeline p {
+  margin: 16px 28px 0 0;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* Services */
+.services {
+  padding-block: clamp(64px, 9vw, 112px);
+}
+
+.services h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 18rem) minmax(0, 1fr);
+  gap: 8px 32px;
+  padding-block: 36px;
+  border-top: 2px solid var(--tint);
+}
+
+.service-mark {
+  width: 28px;
+  height: 28px;
+  margin-top: 4px;
+  background: linear-gradient(135deg, var(--blue) 50%, var(--fold) 50%);
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+
+.service h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.service-body p {
+  margin: 0;
+  max-width: 36rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  padding: 4px 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--fold);
+  background: var(--tint);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+/* Contact */
+.contact {
+  padding-bottom: clamp(64px, 9vw, 112px);
+}
+
+.contact-panel {
+  position: relative;
+  padding: clamp(36px, 6vw, 72px);
+  background: var(--ink);
+  color: #c4dceb;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+
+.contact-panel::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(225deg, var(--blue) 50%, transparent 50%);
+}
+
+.contact-panel h2 {
+  color: #fff;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 600;
+}
+
+.contact-panel p {
+  margin: 16px 0 28px;
+  max-width: 32rem;
+}
+
+.contact-email {
+  font: 600 clamp(1.5rem, 4vw, 2.25rem) / 1.2 var(--display);
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  color: #8fd0ef;
+}
+
+/* Footer */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 32px 48px;
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--blue);
+}
+
+/* One load sequence: the logo tile's corner folds in, then the copy settles */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-visual::after {
+    animation: fold 0.7s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    animation: settle 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  @keyframes fold {
+    from {
+      transform: translate(96px, -96px);
+    }
+  }
+
+  @keyframes settle {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .service {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .service-body {
+    grid-column: 2;
+  }
+
+  .process-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pipeline .pipeline-step,
+  .pipeline li:first-child .pipeline-step {
+    padding-left: 20px;
+    clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 0 100%);
+  }
+
+  .pipeline p {
+    margin-top: 10px;
+  }
+
+  .contact-panel::after {
+    width: 64px;
+    height: 64px;
+  }
+}
